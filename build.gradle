@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.5.4' // Use the latest version
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE' // Use the latest version
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'de.mischa'
+version '0.0.1-SNAPSHOT'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'io.spring.gradle:dependency-management-plugin:1.1.4'
+}
+
+test {
+    useJUnitPlatform()
+}
