@@ -18,7 +18,7 @@
               </v-button>
           </v-row>
           <v-row style="margin-top: 0%; margin-bottom: 0%;">
-              <span style="color: white;">{{ praporTimer }}</span>
+              <span style="color: white;">{{ this.getTimeAsString(praporTimer) }}</span>
           </v-row>
           <v-row style="margin-top: 0px;">
               <v-button>
@@ -114,7 +114,7 @@
             </v-button>
           </v-row>
           <v-row style="margin-top: 0%; margin-bottom: 0%;">
-            <span style="color: white;">{{ skierTimer }}</span>
+            <span style="color: white;">{{ this.getTimeAsString(skierTimer) }}</span>
           </v-row>
           <v-row style="margin-top: 15px;">
       <v-button>
@@ -144,7 +144,7 @@
               </v-button>
           </v-row>
           <v-row style="margin-top: 0%; margin-bottom: 0%;">
-              <span style="color: white;">{{ peacekeeperTimer }}</span>
+              <span style="color: white;">{{ this.getTimeAsString(peacekeeperTimer) }}</span>
           </v-row>
           <v-row style="margin-top: 15px;">
               <v-button>
@@ -252,7 +252,7 @@
           </v-button>
         </v-row>
         <v-row style="margin-top: 0%; margin-bottom: 0%;">
-          <span style="color: white;">{{ mechanicTimer }}</span>
+          <span style="color: white;">{{ this.getTimeAsString(mechanicTimer) }}</span>
         </v-row>
         <v-row style="margin-top: 15px;">
             <v-button>
@@ -294,7 +294,7 @@
             </v-button>
           </v-row>
           <v-row style="margin-top: 0%; margin-bottom: 0%;">
-            <span style="color: white;">{{ jaegerTimer }}</span>
+            <span style="color: white;">{{ this.getTimeAsString(jaegerTimer) }}</span>
           </v-row>
           <v-row style="margin-top: 15px;">
             <v-button>
@@ -309,6 +309,13 @@
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.338 Lapua Magnum UCW</span>
           </v-row>
         </v-col>
+        <v-col>
+          <v-switch v-model="activateAlert1" label="1 Minuten" color="#9a8866" dark></v-switch>
+          <v-switch v-model="activateAlert5" label="5 Minuten" color="#9a8866" dark></v-switch>
+          <v-switch v-model="activateAlert10" label="10 Minuten" color="#9a8866" dark></v-switch>
+          <v-switch v-model="activateAlert20" label="20 Minuten" color="#9a8866" dark></v-switch>
+          <v-switch v-model="activateAlert30" label="30 Minuten" color="#9a8866" dark></v-switch>
+        </v-col>
       </v-row>
     </v-card>
   </v-app>
@@ -318,6 +325,17 @@
 
 import Vue from "vue";
 import router from "@/router";
+import reminder from '../assets/sounds/reminder.mp3';
+import soundPraporReset from '../assets/sounds/Prapor_reset.mp3';
+import soundJaegerReset from '../assets/sounds/Jaeger_reset.mp3';
+import soundSkierReset from '../assets/sounds/Skier_reset.mp3';
+import soundMechanicReset from '../assets/sounds/Mechanic_reset.mp3';
+import soundPeacekeeperReset from '../assets/sounds/Peacekeeper_reset.mp3';
+import soundResetImminent from '../assets/sounds/Trader_reset_is_imminent.mp3';
+import soundResetIn5 from '../assets/sounds/Trader_reset_in_5.mp3';
+import soundResetIn10 from '../assets/sounds/Trader_reset_in_10.mp3';
+import soundResetIn20 from '../assets/sounds/Trader_reset_in_20.mp3';
+import soundResetIn30 from '../assets/sounds/Trader_reset_in_30.mp3';
 
 export default {
     name: "Timer.vue",
@@ -337,6 +355,13 @@ export default {
       setInterval(this.setPeacekeeperTime, 500);
       setInterval(this.setMechanicTime, 500);
       setInterval(this.setJaegerTime, 500);
+      setInterval(() => this.playTraderSound(0, -1), 980);
+
+      setInterval(() => this.playTraderReminder(this.praporClicked, this.praporTimer), 5000);
+      setInterval(() => this.playTraderReminder(this.skierClicked, this.skierTimer), 5000);
+      setInterval(() => this.playTraderReminder(this.peacekeeperClicked, this.peacekeeperTimer), 5000);
+      setInterval(() => this.playTraderReminder(this.mechanicClicked, this.mechanicTimer), 5000);
+      setInterval(() => this.playTraderReminder(this.jaegerClicked, this.jaegerTimer), 5000);
     },
     computed: {
     },
@@ -373,12 +398,14 @@ export default {
           
             const resetTime = new Date(trader.resetTime);
             const currentTime = new Date();
-            const timeDifference = resetTime - currentTime;
-            const seconds = Math.floor(timeDifference / 1000) % 60;
-            const minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
-            const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-            return hours + ":" + minutes + ":" + seconds
+            return resetTime - currentTime;
           }
+        },
+        getTimeAsString(timeDifference) {
+          const seconds = Math.floor(timeDifference / 1000) % 60;
+          const minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
+          const hours = Math.floor(timeDifference / (1000 * 60 * 60));
+          return hours + ":" + minutes + ":" + seconds
         },
         setTitle(title) {
             document.title = title
@@ -412,9 +439,50 @@ export default {
         },
         setPraporTime() {
           this.praporTimer = this.getTraderTimer("Prapor");
+        },
+        checkTraderClicked(traderBoolean, traderTimer, traderSound, startTime, endTime) {
+          if (traderBoolean === true) {
+            if (traderTimer < startTime && traderTimer > endTime) {
+              console.log("TraderTimer: " + traderTimer)
+              console.log("startTime: " + startTime)
+              console.log("endTime: " + endTime)
+              const audio = new Audio(traderSound);
+              audio.play();
+            }
+          }
+        },
+        playTraderSound(startTime, endTime) {
+          startTime *= 1000;
+          endTime *= 1000;
+        
+          this.checkTraderClicked(this.praporClicked, this.praporTimer, this.soundPraporReset, startTime, endTime);
+          this.checkTraderClicked(this.skierClicked, this.skierTimer, this.soundSkierReset, startTime, endTime);
+          this.checkTraderClicked(this.peacekeeperClicked, this.peacekeeperTimer, this.soundPeacekeeperReset, startTime, endTime);
+          this.checkTraderClicked(this.mechanicClicked, this.mechanicTimer, this.soundMechanicReset, startTime, endTime);
+          this.checkTraderClicked(this.jaegerClicked, this.jaegerTimer, this.soundJaegerReset, startTime, endTime);
+        },
+        playTraderReminder(traderClicked, traderTimer) {
+          if (traderClicked) {
+            if (this.activateAlert1) {
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetImminent, 60000, 55000)
+            }
+            if (this.activateAlert5) {
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn5, 300000, 295000)
+            }
+            if (this.activateAlert10) {
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn10, 600000, 595000)
+            } 
+            if (this.activateAlert20) {
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn20, 1200000, 1195000)
+            }
+            if (this.activateAlert30) {
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn30, 1800000, 1750000)
+            }
+          }
         }
     },
     data: () => ({
+        traderData: [],
         praporClicked: false,
         skierClicked: false,
         peacekeeperClicked: false,
@@ -425,7 +493,11 @@ export default {
         peacekeeperTimer: '',
         mechanicTimer: '',
         jaegerTimer: '',
-        traderData: []
+        activateAlert1: false,
+        activateAlert5: false,
+        activateAlert10: false,
+        activateAlert20: false,
+        activateAlert30: false
     })
 }
 </script>
