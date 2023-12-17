@@ -350,6 +350,7 @@ export default {
       this.getTraderTimer("Jaeger")
     },
     mounted() {
+      setInterval(this.getData, 30000);
       setInterval(this.setPraporTime, 500);
       setInterval(this.setSkierTime, 500);
       setInterval(this.setPeacekeeperTime, 500);
@@ -402,10 +403,26 @@ export default {
           }
         },
         getTimeAsString(timeDifference) {
-          const seconds = Math.floor(timeDifference / 1000) % 60;
-          const minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
-          const hours = Math.floor(timeDifference / (1000 * 60 * 60));
-          return hours + ":" + minutes + ":" + seconds
+          if (timeDifference < 0) {
+            timeDifference *= -1
+            return "Vor: " + Math.floor(timeDifference / 1000) + " Sekunden";
+          } else {
+            let seconds = Math.floor(timeDifference / 1000) % 60;
+            let minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
+            let hours = Math.floor(timeDifference / (1000 * 60 * 60));
+
+            if (hours < 10) {
+              hours = "0" + hours
+            }
+            if (minutes < 10) {
+              minutes = "0" + minutes
+            }
+            if (seconds < 10) {
+              seconds = "0" + seconds
+            }
+          
+            return hours + ":" + minutes + ":" + seconds
+          }
         },
         setTitle(title) {
             document.title = title
