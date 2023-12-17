@@ -315,6 +315,7 @@
           <v-switch v-model="activateAlert10" label="10 Minuten" color="#9a8866" dark></v-switch>
           <v-switch v-model="activateAlert20" label="20 Minuten" color="#9a8866" dark></v-switch>
           <v-switch v-model="activateAlert30" label="30 Minuten" color="#9a8866" dark></v-switch>
+          <v-slider v-model="volumeLevelSlider" color="#E7E5D4" track-color="black" label="Volume"></v-slider>
         </v-col>
       </v-row>
     </v-card>
@@ -325,7 +326,6 @@
 
 import Vue from "vue";
 import router from "@/router";
-import reminder from '../assets/sounds/reminder.mp3';
 import soundPraporReset from '../assets/sounds/Prapor_reset.mp3';
 import soundJaegerReset from '../assets/sounds/Jaeger_reset.mp3';
 import soundSkierReset from '../assets/sounds/Skier_reset.mp3';
@@ -447,6 +447,7 @@ export default {
               console.log("startTime: " + startTime)
               console.log("endTime: " + endTime)
               const audio = new Audio(traderSound);
+              audio.volume= this.volumeLevelSlider/100
               audio.play();
             }
           }
@@ -455,11 +456,11 @@ export default {
           startTime *= 1000;
           endTime *= 1000;
         
-          this.checkTraderClicked(this.praporClicked, this.praporTimer, this.soundPraporReset, startTime, endTime);
-          this.checkTraderClicked(this.skierClicked, this.skierTimer, this.soundSkierReset, startTime, endTime);
-          this.checkTraderClicked(this.peacekeeperClicked, this.peacekeeperTimer, this.soundPeacekeeperReset, startTime, endTime);
-          this.checkTraderClicked(this.mechanicClicked, this.mechanicTimer, this.soundMechanicReset, startTime, endTime);
-          this.checkTraderClicked(this.jaegerClicked, this.jaegerTimer, this.soundJaegerReset, startTime, endTime);
+          this.checkTraderClicked(this.praporClicked, this.praporTimer, soundPraporReset, startTime, endTime);
+          this.checkTraderClicked(this.skierClicked, this.skierTimer, soundSkierReset, startTime, endTime);
+          this.checkTraderClicked(this.peacekeeperClicked, this.peacekeeperTimer, soundPeacekeeperReset, startTime, endTime);
+          this.checkTraderClicked(this.mechanicClicked, this.mechanicTimer, soundMechanicReset, startTime, endTime);
+          this.checkTraderClicked(this.jaegerClicked, this.jaegerTimer, soundJaegerReset, startTime, endTime);
         },
         playTraderReminder(traderClicked, traderTimer) {
           if (traderClicked) {
@@ -497,7 +498,8 @@ export default {
         activateAlert5: false,
         activateAlert10: false,
         activateAlert20: false,
-        activateAlert30: false
+        activateAlert30: false,
+        volumeLevelSlider: 100
     })
 }
 </script>
