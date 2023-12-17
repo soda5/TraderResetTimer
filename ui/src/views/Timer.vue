@@ -350,7 +350,7 @@ export default {
       this.getTraderTimer("Jaeger")
     },
     mounted() {
-      setInterval(this.getData, 30000);
+      setInterval(this.getData, 300000);
       setInterval(this.setPraporTime, 500);
       setInterval(this.setSkierTime, 500);
       setInterval(this.setPeacekeeperTime, 500);
@@ -404,8 +404,13 @@ export default {
         },
         getTimeAsString(timeDifference) {
           if (timeDifference < 0) {
-            timeDifference *= -1
-            return "Vor: " + Math.floor(timeDifference / 1000) + " Sekunden";
+            if (timeDifference > -60000) {
+              timeDifference *= -1
+              return "Vor: " + Math.floor(timeDifference / 1000) + " Sekunden";
+            } else {
+              timeDifference *= -1
+              return "Vor: " + Math.floor(timeDifference / (1000 * 60)) % 60 + " Minuten";
+            }
           } else {
             let seconds = Math.floor(timeDifference / 1000) % 60;
             let minutes = Math.floor(timeDifference / (1000 * 60)) % 60;
