@@ -27,3 +27,5 @@ replay_pid*
 .idea
 build/
 output/
+node_modules/
+ui/node_modules/
