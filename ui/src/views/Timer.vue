@@ -499,7 +499,7 @@ export default {
               this.checkTraderClicked(traderClicked, traderTimer, soundResetIn20, 1200000, 1195000)
             }
             if (this.activateAlert30) {
-              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn30, 1800000, 1750000)
+              this.checkTraderClicked(traderClicked, traderTimer, soundResetIn30, 1800000, 1795000)
             }
           }
         }
