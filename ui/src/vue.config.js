@@ -7,7 +7,7 @@ module.exports = {
         }
     },
     transpileDependencies: ['vuetify'],
-    outputDir: 'dist/public',
+    outputDir: 'dist',
     devServer: {
         port: '8081',
         proxy: {
