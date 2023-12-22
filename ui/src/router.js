@@ -14,7 +14,15 @@ export default new Router({
             meta: {
                 title: 'Tarkov Timer'
             },
+        },
+        {
+            path: '/Maps',
+            name: 'maps',
+            component: () => import('./views/Maps.vue'),
+            props: true,
+            meta: {
+                title: 'Tarkov Maps'
+            },
         }
-
     ]
 })

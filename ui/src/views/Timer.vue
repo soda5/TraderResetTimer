@@ -340,6 +340,7 @@ import soundResetIn30 from '../assets/sounds/Trader_reset_in_30.mp3';
 export default {
     name: "Timer.vue",
     beforeCreate() {
+      document.title = "Tarkov Trader Timer"
     },
     async created() {
       await this.getData();
