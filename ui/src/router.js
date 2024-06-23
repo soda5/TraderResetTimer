@@ -1,28 +1,31 @@
-import Vue from 'vue'
-import Router from 'vue-router'
+import { createRouter, createWebHistory } from 'vue-router'
+import Timer from './views/Timer.vue'
+import Maps from './views/Maps.vue'
 
-Vue.use(Router)
+const routes = [
+  {
+    path: '/',
+    name: 'timer',
+    component: Timer,
+    props: true,
+    meta: {
+      title: 'Tarkov Timer'
+    }
+  },
+  {
+    path: '/Maps',
+    name: 'maps',
+    component: Maps,
+    props: true,
+    meta: {
+      title: 'Tarkov Maps'
+    }
+  }
+]
 
-export default new Router({
-    base: process.env.BASE_URL,
-    routes: [
-        {
-            path: '/',
-            name: 'timer',
-            component: () => import('./views/Timer.vue'),
-            props: true,
-            meta: {
-                title: 'Tarkov Timer'
-            },
-        },
-        {
-            path: '/Maps',
-            name: 'maps',
-            component: () => import('./views/Maps.vue'),
-            props: true,
-            meta: {
-                title: 'Tarkov Maps'
-            },
-        }
-    ]
+const router = createRouter({
+  history: createWebHistory(),
+  routes
 })
+
+export default router
