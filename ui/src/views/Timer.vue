@@ -325,7 +325,6 @@
 <script>
 
 import { defineComponent } from 'vue';
-import { VCard, VCardTitle, VBtn } from 'vuetify/components';
 import soundPraporReset from '../assets/sounds/Prapor_reset.mp3';
 import soundJaegerReset from '../assets/sounds/Jaeger_reset.mp3';
 import soundSkierReset from '../assets/sounds/Skier_reset.mp3';
