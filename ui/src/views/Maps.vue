@@ -60,7 +60,7 @@ export default {
     methods: {
       onImageClicked(mapName) {
       this.showMap = true;
-      import(`@/assets/images/Maps/${mapName}`)
+      import(/* @vite-ignore */`@/assets/images/Maps/${mapName}`)
         .then(image => {
           this.mapToShow = image.default;
           console.log("Image path:", this.mapToShow);
