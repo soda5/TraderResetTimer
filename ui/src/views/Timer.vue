@@ -7,12 +7,12 @@
           <v-row style="padding-bottom: 10%;">
               <v-btn @click="selectPrapor()">
               <v-img
-                  src="../assets/images/prapor-portrait.png"
+                  src="src/assets/images/prapor-portrait.png"
                   style="border-width: 3px;border-style: solid; border-color: #9a8866;"
                   v-if="praporClicked == true">
               </v-img>
               <v-img 
-                  src="../assets/images/prapor-portrait.png"
+                  src="src/assets/images/prapor-portrait.png"
                   v-else>
                 </v-img>
               </v-btn>
@@ -22,79 +22,79 @@
           </v-row>
           <v-row style="margin-top: 0px;">
               <v-btn>
-                <v-img style="width: 32px;" src="../assets/images/5.45x39mm_BP.png"></v-img>
+                <v-img style="width: 32px;" src="src/assets/images/5.45x39mm_BP.png"></v-img>
               </v-btn>
               <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.45x39mm BP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/5.45x39mm_BS.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/5.45x39mm_BS.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.45x39mm BS</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/5.45x39mm_BT.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/5.45x39mm_BT.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.45x39mm BT</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/7.62x39mm_BP.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/7.62x39mm_BP.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x39mm BP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/7.62x39mm_PP.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/7.62x39mm_PP.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x39mm PP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/7.62x54mm_R_BS.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/7.62x54mm_R_BS.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x54mm R BS</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/7.62x54mm_R_BT.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/7.62x54mm_R_BT.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x54mm R BT</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/7.62x54mm_R_PS.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/7.62x54mm_R_PS.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x54mm R PS</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/9x39mm_BP.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/9x39mm_BP.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x39mm BP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/9x39mm_SP-6.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/9x39mm_SP-6.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x39mm SP-6</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/9x39mm_SPP.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/9x39mm_SPP.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x39mm SPP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/12,7x55mm_PS12.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/12,7x55mm_PS12.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">12,7x55mm PS12</span>
           </v-row>
           <v-row style="margin-top: 15px;">
                 <v-btn>
-                  <v-img style="width: 32px;" src="../assets/images/12,7x55mm_PS12B.png"></v-img>
+                  <v-img style="width: 32px;" src="src/assets/images/12,7x55mm_PS12B.png"></v-img>
                 </v-btn>
                 <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">12,7x55mm PS12B</span>
           </v-row>
@@ -103,12 +103,12 @@
           <v-row style="padding-bottom: 10%;">
             <v-btn @click="selectSkier()">
             <v-img
-                src="../assets/images/skier-portrait.png"
+                src="src/assets/images/skier-portrait.png"
                 style="border-width: 3px;border-style: solid; border-color: #9a8866;"
                 v-if="skierClicked == true">
             </v-img>
             <v-img 
-                src="../assets/images/skier-portrait.png"
+                src="src/assets/images/skier-portrait.png"
                 v-else>
               </v-img>
             </v-btn>
@@ -118,13 +118,13 @@
           </v-row>
           <v-row style="margin-top: 15px;">
       <v-btn>
-        <v-img style="width: 32px;" src="../assets/images/.300_Blackout_CBJ.png"></v-img>
+        <v-img style="width: 32px;" src="src/assets/images/.300_Blackout_CBJ.png"></v-img>
       </v-btn>
       <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.300 Blackout CBJ</span>
           </v-row>
           <v-row style="margin-top: 15px;">
       <v-btn>
-        <v-img style="width: 32px;" src="../assets/images/9x19mm_Luger_CCI.png"></v-img>
+        <v-img style="width: 32px;" src="src/assets/images/9x19mm_Luger_CCI.png"></v-img>
       </v-btn>
       <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x19mm Luger CCI</span>
           </v-row>
@@ -133,12 +133,12 @@
           <v-row style="padding-bottom: 10%;">
               <v-btn @click="selectPeacekeeper()">
               <v-img
-                  src="../assets/images/peacekeeper-portrait.png"
+                  src="src/assets/images/peacekeeper-portrait.png"
                   style="border-width: 3px;border-style: solid; border-color: #9a8866;"
                   v-if="peacekeeperClicked == true">
               </v-img>
               <v-img 
-                  src="../assets/images/peacekeeper-portrait.png"
+                  src="src/assets/images/peacekeeper-portrait.png"
                   v-else>
                 </v-img>
               </v-btn>
@@ -148,91 +148,91 @@
           </v-row>
           <v-row style="margin-top: 15px;">
               <v-btn>
-                <v-img style="width: 32px;" src="../assets/images/9x19mm_QuakeMaker.png"></v-img>
+                <v-img style="width: 32px;" src="src/assets/images/9x19mm_QuakeMaker.png"></v-img>
               </v-btn>
               <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x19mm QuakeMaker</span>
           </v-row>
           <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/9x19mm_AP_6.3.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/9x19mm_AP_6.3.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x19mm AP 6.3</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/9x19mm_PBP.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/9x19mm_PBP.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x19mm PBP</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/4,6x30mm_FMJ_SX.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/4,6x30mm_FMJ_SX.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">4,6x30mm FMJ SX</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/4,6x30mm_AP_SX.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/4,6x30mm_AP_SX.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">4,6x30mm AP SX</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/.300_Blackout_M62_Tracer.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/.300_Blackout_M62_Tracer.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.300 Blackout M62 Tracer</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/5.45x39mm_7N40.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/5.45x39mm_7N40.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.45x39mm 7N40</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/5.56x45mm_M856A1.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/5.56x45mm_M856A1.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.56x45mm M856A1</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/5,56x45mm_M855A1.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/5,56x45mm_M855A1.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5,56x45mm M855A1</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/5.56x45mm_SSA_AP.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/5.56x45mm_SSA_AP.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">5.56x45mm SSA AP</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/7.62x39mm_MAI_AP.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/7.62x39mm_MAI_AP.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x39mm MAI AP</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/7.62x51mm_M80.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/7.62x51mm_M80.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x51mm M80</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/7.62x51mm_M62.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/7.62x51mm_M62.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x51mm M62</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/7.62x51mm_M993.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/7.62x51mm_M993.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">7.62x51mm M993</span>
             </v-row>
             <v-row style="margin-top: 15px;">
         <v-btn>
-          <v-img style="width: 32px;" src="../assets/images/.338_Lapua_Magnum.png"></v-img>
+          <v-img style="width: 32px;" src="src/assets/images/.338_Lapua_Magnum.png"></v-img>
         </v-btn>
         <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.338 Lapua Magnum</span>
             </v-row>
@@ -241,12 +241,12 @@
         <v-row style="padding-bottom: 10%;">
           <v-btn @click="selectMechnic()">
           <v-img
-              src="../assets/images/mechanic-portrait.png"
+              src="src/assets/images/mechanic-portrait.png"
               style="border-width: 3px;border-style: solid; border-color: #9a8866;"
               v-if="mechanicClicked == true">
           </v-img>
           <v-img 
-              src="../assets/images/mechanic-portrait.png"
+              src="src/assets/images/mechanic-portrait.png"
               v-else>
             </v-img>
           </v-btn>
@@ -256,25 +256,25 @@
         </v-row>
         <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/.45_ACP_RIP.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/.45_ACP_RIP.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.45 ACP RIP</span>
         </v-row>
         <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/4.6x30mm_JSP_SX.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/4.6x30mm_JSP_SX.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">4.6x30mm JSP SX</span>
         </v-row>
         <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/.338_Lapua_TAC-X.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/.338_Lapua_TAC-X.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.338 Lapua TAC-X</span>
         </v-row>
         <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/.366_TKM_AP-M.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/.366_TKM_AP-M.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.366 TKM AP-M</span>
         </v-row>
@@ -283,12 +283,12 @@
           <v-row style="padding-bottom: 10%;">
             <v-btn @click="selectJaeger()">
             <v-img
-                src="../assets/images/jaeger-portrait.png"
+                src="src/assets/images/jaeger-portrait.png"
                 style="border-width: 3px;border-style: solid; border-color: #9a8866;"
                 v-if="jaegerClicked == true">
             </v-img>
             <v-img 
-                src="../assets/images/jaeger-portrait.png"
+                src="src/assets/images/jaeger-portrait.png"
                 v-else>
               </v-img>
             </v-btn>
@@ -298,13 +298,13 @@
           </v-row>
           <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/9x19mm_RIP.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/9x19mm_RIP.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">9x19mm RIP</span>
           </v-row>
           <v-row style="margin-top: 15px;">
             <v-btn>
-              <v-img style="width: 32px;" src="../assets/images/.338_Lapua_Magnum_UCW.png"></v-img>
+              <v-img style="width: 32px;" src="src/assets/images/.338_Lapua_Magnum_UCW.png"></v-img>
             </v-btn>
             <span style="font-size: small; font-family: sans-serif; color: #E7E5D4; align-self: center;margin-left: 3px;">.338 Lapua Magnum UCW</span>
           </v-row>
@@ -335,9 +335,23 @@ import soundResetIn5 from '../assets/sounds/Trader_reset_in_5.mp3';
 import soundResetIn10 from '../assets/sounds/Trader_reset_in_10.mp3';
 import soundResetIn20 from '../assets/sounds/Trader_reset_in_20.mp3';
 import soundResetIn30 from '../assets/sounds/Trader_reset_in_30.mp3';
+import { VCard, VCardTitle, VRow, VCol, VDialog, VApp, VImg, VBtn, VSwitch, VSlider } from 'vuetify/components';
+import axios from 'axios';
 
-export default {
+export default defineComponent ({
     name: "Timer.vue",
+    components: {
+      VCard,
+      VCardTitle,
+      VRow,
+      VCol,
+      VDialog,
+      VApp,
+      VImg,
+      VBtn,
+      VSwitch,
+      VSlider
+    },
     beforeCreate() {
       document.title = "Tarkov Trader Timer"
     },
@@ -384,11 +398,11 @@ export default {
             query: graphqlQuery,
           };
         
-          // Vue.axios.post(url, payload).then(response => {
-          //   this.traderData = response.data.data.traders;
-          // }).catch(() => {
-          //   console.log("getData not successful");
-          // });
+          axios.post(url, payload).then(response => {
+            this.traderData = response.data.data.traders;
+          }).catch(() => {
+            console.log("getData not successful");
+          });
         },
         getTraderTimer(traderName) {
           if(this.traderData.length > 0) {
@@ -523,7 +537,7 @@ export default {
         activateAlert30: false,
         volumeLevelSlider: 100
     })
-}
+})
 </script>
 
 <style scoped>
